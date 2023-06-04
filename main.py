@@ -6,13 +6,13 @@ app = Flask(__name__)
 def serve_car1(image_number):
     return send_from_directory('./car1', f'image_{image_number}.jpg')
 
-@app.route('/car2/image_<int:image_number>.png')
+@app.route('/car2/image_<int:image_number>.jpg')
 def serve_car2(image_number):
-    return send_from_directory('./car2', f'image_{image_number}.png')
+    return send_from_directory('./car2', f'image_{image_number}.jpg')
 
-@app.route('/car3/image_<int:image_number>.png')
+@app.route('/car3/image_<int:image_number>.jpg')
 def serve_car3(image_number):
-    return send_from_directory('./car3', f'image_{image_number}.png')
+    return send_from_directory('./car3', f'image_{image_number}.jpg')
 
 if __name__ == '__main__':
     app.run(port=8001)
